@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "generate-password": "^1.7.0",
+    "lowdb": "^1.0.0",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.2"
+  }
+}

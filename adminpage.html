@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6A Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=general-sans@500,600,400&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=array@400,401&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=pilcrow-rounded@600&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&f[]=switzer@600,201&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&f[]=satoshi@900,500,301,400&display=swap" rel="stylesheet"> 
+    <script>
+        var socket = io();
+        socket.on('poster', (msg) => {
+            console.log(msg)
+        })
+        function $(dc){
+            return document.querySelector(dc);
+        }
+        function publish(){
+            socket.emit('news', {
+                title: $('#title').value,
+                image: $('#image').value,
+                content: $('#content').value,
+                id: Math.random() * 1000000000000000000 + 100000000000000
+            })
+            open('/news', '_self')
+        }
+        window.onload=function(){
+            if(localStorage.getItem(window.location.pathname.split("/").pop()) == null){
+                localStorage.setItem(window.location.pathname.split("/").pop(), Date.now())
+            }
+      var start=localStorage.getItem('time'),r=document.getElementById('test');
+      (function f(){
+      var diff=Date.now()-start,ns=(((3e5-diff)/1e3)>>0),m=(ns/60)>>0,s=ns-m*60;
+      r.textContent="Session will closes in "+m+':'+((''+s).length>1?'':'0')+s;
+      if(diff>3e5){
+         start=localStorage.getItem(window.location.pathname.split("/").pop())
+      }
+      setTimeout(f,100);
+      })();
+}
+    </script>
+    <style>
+        *{
+            font-family: Clash Display;
+            scroll-behavior: smooth;
+            transition: .2s;
+        }
+        .kkl{
+            position: absolute;
+            background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, #e81cff);
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body class="flex">
+    <div class="kkl" style="width: 100%;height:3px;position: fixed;"></div>
+    <div style="position: sticky;top:0;border-right: 0px solid rgba(128, 128, 128, 0.278);width: auto;align-self: flex-start;z-index: -1;" class="pr-4 p-6">
+        <h1 class="bg-indigo-400 p-4 rounded-lg" style="background: transparent;"><i class="bi bi-sliders2 text-4xl font-semibold mr-2"></i> <span class="font-semibold text-4xl">6A</span><span class="font-medium text-4xl"> Dashboard</span>  </h1>
+        <hr class="my-4">
+        <div class="py-4 text-xl"><i class="bi bi-house mr-4 ml-2"></i> Home</div>
+        <div class="py-4 text-xl"><i class="bi bi-file-post mr-4 ml-2"></i> News</div>
+        <p id="test" class="test">Session time : </p>
+    </div>
+    <div style="border-right: 1px solid rgba(128, 128, 128, 0.278);width: 100%; height: 100vh;font-family: 'Switzer', sans-serif;" class="p-16">
+        <h1 class="text-4xl font-semibold" style="font-family: 'Satoshi', sans-serif;">Hello Cornelius</h1>
+        <h1 class="text-base text-slate-900/40 font-light" style="font-family: 'Satoshi', sans-serif;">Welcome to your personalised dashboard, made by Cornelius C. and tailwindcss</h1>
+        <div class="p-6 rounded-lg bg-red-50 my-4">
+            <h1 style="font-family: Satoshi;" class="font-semibold text-2xl text-black/70">Start writing now!</h1>
+            <br>
+            <a class="bg-orange-100 p-2 mt-2 rounded-lg font-medium text-black/60 mt-4 hover:bg-orange-200/50" style="font-family: Satoshi;" href="#article">Write an article</a>
+        </div>
+        <hr class="py-2">
+        <h1 style="font-family: Satoshi;" class="font-semibold text-2xl">Write an article</h1>
+        <h1 style="font-family: Satoshi;" class="font-light text-base text-slate-900/60">Write a news or article to 6A Class' Website</h1>
+        <div class="p-2 my-4" id="article">
+            <input type="text" id="title" class="border-b border-black/40 outline-none font-light text-2xl p-2 focus:p-4" placeholder="Title..." style="font-family: Satoshi;width: 100%;">
+            <input type="text" id="image" class="border-b border-black/40 outline-none font-light text-xl p-2" placeholder="Image Cover..." style="font-family: Satoshi;width: 100%;">
+            <br>
+            <textarea type="text" id="content" class="border-b border-black/40 outline-none font-light text-xl p-2" rows="10" placeholder="Content..." style="font-family: Satoshi;width: 100%;"></textarea>
+            <button class="p-2 rounded-md bg-orange-50 m-2 float-right px-4 font-semibold ring-0 hover:ring-2 ring-orange-200 hover:bg-orange-100" style="font-family: Satoshi;" onclick="publish()">Submit</button>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,56 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(/fonts/Inter-SemiBold.ttf);
+}
+@font-face {
+    font-family: myFirstFont2;
+    src: url(/fonts/Inter-Bold.ttf);
+}
+@font-face {
+    font-family: metropolis;
+    src: url(/fonts/Metropolis-SemiBold.ttf);
+}
+@font-face {
+    font-family: metropolislight;
+    src: url(/fonts/Metropolis-Medium.ttf);
+}
+*{
+    font-family: myFirstFont;
+}
+.kkl{
+    background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, #e81cff);
+}
+img{
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    transition: .2s;
+    cursor: pointer;
+}
+img:hover{
+    box-shadow: none;
+}
+
+#buttonClass {
+    padding: .75rem;
+    font-family:Supreme;
+    width:140px;
+    height:50px;
+    border-width:3px;
+    color:rgba(249, 72, 146, 1);
+    border-color:rgba(249, 72, 146, 1);
+    font-weight:bold;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+    box-shadow: 8px 8px 0px 0px rgba(249, 72, 146, 1);
+    background:rgba(255, 255, 255, 1);
+    transition: .2s;
+}
+#buttonClass:hover{
+    box-shadow: none;
+    background: rgba(249, 72, 146, 1);
+    color: white;
+}          
+*{
+    scroll-behavior: smooth;    
+}

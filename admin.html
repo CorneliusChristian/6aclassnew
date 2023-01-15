@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=general-sans@500,600,400&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=array@400,401&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=pilcrow-rounded@600&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&f[]=switzer@600,201&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&f[]=satoshi@900,500,301,400&display=swap" rel="stylesheet"> 
+    <style>
+        *{
+            font-family: Supreme;
+        }
+        body, html{
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="p-2 flex">
+    <div class="p-8 text-white rounded-xl" style="height: 100%;background: #f94868;">
+        <h1 class="text-xl font-light mb-4" style="font-family: General Sans;">SIXACLASS</h1>
+        <h1 class="text-4xl font-semibold">Administration Panel Login</h1>
+    </div>
+    <div class="p-20 py-40 text-center" style="width: 100%;">
+        <h1 class="text-4xl">Admin Passcode</h1>
+        <p>You need admin passcode to access this panel.</p>
+        <hr class="px-90 my-12">
+        <input type="password" placeholder="password" class="rounded-lg mb-4 ring-2 ring-slate-200/80 p-2 focus:ring-4 outline-none">
+        <br>
+        <button onclick="doneForm()" class="p-2 text-white rounded-lg w-40 ring-0 hover:ring-2" style="background: #f94892;">Submit</button>
+    </div>
+    
+    <script>
+        var socket = io();
+        function doneForm(){
+            var a = document.querySelector('input').value;
+            socket.emit('administration', a)
+        }
+            socket.on('passy', (pwpw) => {
+                open('/admin/'+pwpw.toString(), '_self')
+            })
+    </script>
+</body>
+</html>

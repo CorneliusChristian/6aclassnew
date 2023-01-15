@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6A Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: myFirstFont;
+            src: url(fonts/Inter-SemiBold.ttf);
+        }
+        @font-face {
+            font-family: myFirstFont2;
+            src: url(fonts/Inter-Bold.ttf);
+        }
+        @font-face {
+            font-family: metropolis;
+            src: url(fonts/Metropolis-SemiBold.ttf);
+        }
+        @font-face {
+            font-family: metropolislight;
+            src: url(fonts/Metropolis-Medium.ttf);
+        }
+        *{
+            font-family: myFirstFont;
+        }
+        .kkl{
+            background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+            background: rgb(234,0,0);
+    background: linear-gradient(131deg, rgba(234,0,0,1) 0%, rgba(254,74,19,1) 48%, rgba(255,198,0,1) 100%); 
+    background: rgb(131,58,180);
+background: -moz-linear-gradient(283deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+background: -webkit-linear-gradient(283deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+background: linear-gradient(283deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1); 
+        }
+        img{
+            transition: .2s;
+            border-radius: 5px;
+        }
+        img:hover{
+            box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px;
+        }
+        #explore{
+            box-shadow: #d53369 5px 5px 0px;
+            border: 3px solid #d53369;
+            background: transparent;
+            transition: .2s;
+            color: #d53369;
+            
+        }
+        #explore:hover{
+            border: 3px solid #d53369;
+            background: #d53369;
+            transition: .2s;
+            box-shadow: none;
+            color: white;
+        }
+        body{
+            background-color: #ffffff;
+opacity: 1.0;
+
+        }
+        @media only screen and (max-width: 620px) {
+            #wkwk{
+                height: 0px;
+            }
+            #img2{
+                height: 55vw;
+                min-width: 75vw;
+                border-radius: 1em;
+            }
+            #joke{
+                display: none;
+            }
+        }
+    </style>
+    <script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/imageviewer/1.1.0/viewer.js" integrity="sha512-B/Fq6n5Mr2myLD1ls1c0W4EBEGqEjI7GIhoE8irtb/X6W2J/f1vrZhkc5E1m6rXxxHeD3T+9kROYxtMv45s40A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imageviewer/1.1.0/viewer.css" integrity="sha512-zjtv6O/V90xbtThlL9qyg8//kV/EyXJ47nrXR524Ip/qcrth9sJfVfFqTdQWGGqQ59i1kiVy1HiW9kgNj+QKCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="kkl" style="width: 100%;height:3px;"></div>
+    <header class="p-6">
+        <h1 style="font-family: myFirstFont;display: inline;" class="text-xl"><span class="rounded-md bg-orange-600 text-white p-1 px-1.5 hover:bg-orange-600/30 hover:text-orange-600">6A</span> <span class="text-orange-600" style="font-family: myFirstFont;" id="joke">Class</span></h1>
+        <div class="kkk" style="display: inline;">
+            <button id="toolbar"  class="float-right text-base mx-2 text-black/50 hover:text-black" style="font-family: myFirstFont2;">Documentation</button>
+            <button id="toolbar"  class="float-right text-base mx-2 text-black/50 hover:text-black" style="font-family: myFirstFont2;">Gallery</button>
+            <button  id="toolbar" class="float-right text-base mx-2 text-black/50 hover:text-black" style="font-family: myFirstFont2;" onclick="news()">News</button>
+            <button id="toolbar"  class="float-right text-base mx-2 text-black/50 hover:text-black" style="font-family: myFirstFont2;">Useful Things</button>
+            <button id="toolbar"  class="float-right text-base mx-2 text-red-500/80 hover:text-red-600" style="font-family: myFirstFont2;"><i class="bi bi-exclamation-triangle-fill"></i> Report</button>
+        </div>
+        
+    </header>
+    <main class="lg:p-16 xl:px-16 md:px-12 md:p-12 sm:px-8 px-8 p-12 ">
+        <h3 class="text-3xl text-black/50 mt-6 md:mt-12" style="display: inline;font-family: metropolis;">
+            Gallery of
+        </h3>
+        <br>
+        <h1 class="text-6xl lg:text-6xl md:text-6xl text-black/70" style="display: inline;font-family: metropolis;">Our Class</h1>
+        <br>
+        <p class="text-2xl float-left text-slate-900/80 pb-1" id="welcome" style="font-family: metropolis;transform: translate(0px, 0.5em)    ;" >
+            In this page, you can find the photo gallery of our class! You are free for downloading those images.
+        </p>
+        <br>
+        <button id="explore" style="font-family: metropolislight;" class="bg-orange-600 text-white p-2 text-2xl hover:bg-transparent hover:text-black/50 mt-6 mb-2 ">Gallery</button>
+        <hr class="my-2">
+        <div class="grid grid-cols-5 grid-flow-row gap-4" id="wkwk">
+            <img class="oklah" src="https://i.imgur.com/J0KIAPh.jpeg" referrerpolicy="no-referrer" alt="">
+            <img src="https://i.imgur.com/TlnTxCR.jpeg" referrerpolicy="no-referrer" alt="">
+        </div>
+    </main>
+    <main class="">
+        
+    </main>
+    <style>
+
+    </style>
+    <script>
+        function news(){
+            open('/news', '_self')
+        }
+        $("#wkwk").viewer()
+// Get the Viewer.js instance after initialized
+    </script>
+</body>
+</html>
