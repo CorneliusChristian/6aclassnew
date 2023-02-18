@@ -32,7 +32,7 @@
             <a  id="toolbar" class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="news/">News</a>
             <a  id="toolbar" class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="/student">Student List</a>
             <button id="toolbar"  class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" onclick="links()">Links</button>
-            <button id="toolbar"  class="float-right font-semibold text-base mx-2 text-red-500/80 hover:text-red-600" style="font-family: General Sans;" onclick="dev()"><i class="bi bi-exclamation-triangle-fill"></i> Report</button>
+            <button id="toolbar" onclick="hkj()" class="float-right font-semibold text-base mx-2 text-red-500/80 hover:text-red-600" style="font-family: General Sans;" onclick="dev()"><i class="bi bi-exclamation-triangle-fill"></i> Report Center</button>
         </div>
         
     </header>
@@ -86,6 +86,9 @@
         function gallery(){
             open('/gallery', '_self')
         }
+		function hkj(){
+			open('/report')
+		}
     </script>
     <script>
         var socket = io();

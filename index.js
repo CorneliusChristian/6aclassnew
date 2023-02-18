@@ -19,6 +19,9 @@ app.use('/a', express.static(__dirname+'/assets'))
 app.get('/', (req, res) => {
   res.sendFile(__dirname+'/alpha.html')
 })
+app.get('/report', (req, res) => {
+  res.sendFile(__dirname+'/report.html')
+})
 app.get('/alpha', (req, res) => {
   res.sendFile(__dirname+'/alpha.html')
 })

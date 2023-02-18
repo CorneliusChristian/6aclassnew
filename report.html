@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6A Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=general-sans@500,600,400&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=array@400,401&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=pilcrow-rounded@600&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html, body{
+            background: #33261F;
+            overflow-x: hidden  ;
+        }
+        @font-face {
+        font-family: sceb;
+        src: url(/a/font/nk57-monospace-sc-bd.ttf);
+        }
+        @font-face {
+        font-family: exit;
+        src: url(/a/font/nk57-monospace-sc-lt.ttf);
+        }
+        @font-face {
+        font-family: sebd;
+        src: url(/a/font/nk57-monospace-sc-bd.ttf);
+        }
+
+        #kjl{
+            font-size: 9.5vh;
+            transition: .2s;
+        }
+        #kjl:hover{
+            font-size: 11vh;
+        }
+    </style>
+    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- THIS WEBSITE IS UNDER DEVELOPMENT / WEBSITE INI SEDANG DALAM PERKEMBANGAN-->
+    <div class="kkl" style="width: 100%;height:0.7rem;background: #335DF5;"></div>
+    <img src="https://upload.cornel629.repl.co/u/1b9fa0ae-d7aa-4c61-94f0-1a5ef1150ed8.svg" alt="" class="glitch" style="position: absolute !important;bottom: -13em;right: -4em;width:30vw;rotate: 10deg;">
+    <main class="p-36 px-40" id="grid1" style="width: 100%;">
+        <div class="text-2xl text-black/50 mt-6 md:mt-12" style="display: inline;font-family: 'Supreme';width: 100%;">
+            <h1 class="text-8xl text-white" style="font-family: sceb;color: #C6DDF0;display: inline;">RC6AC </h1>
+            <button class="text-white float-right" id="kjl" onclick="newreport()"><i class="bi bi-plus-square"></i></button>
+            <h1 class="text-4xl text-white" style="font-family: exit;color: #C6DDF0;"><span style="font-family: sebd;">R</span>eport <span style="font-family: sebd;">C</span>enter of <span style="font-family: sebd;">6A</span> <span style="font-family: sebd;">C</span>lass </h1>
+        </div>
+        <div class="py-4"></div>
+        <div class="rounded-lg bg-black/50 p-6" style="color:#C6DDF0;">
+            <p class="text-2xl" style="font-family: system-ui;">
+                <span class="text-3xl font-semibold">Introduction</span><br><br>
+                This is a special page for reporting/solving problems in 6A Class. This page is intended for reporting/solving problems, so don't use it for another reason, if you violate this rule, your account may get banned.
+                <br>
+                <br>
+                <span class="text-3xl font-semibold">How to use it</span><br><br>
+                Press the plus button on the right-top of this page, and then describe your problem with formal and approriate language, if you have inapproriate proofs/evidence (e.g. images, videos) you may flag the evidence as NSFW (Not Safe For Work)
+                <br>
+
+            </p>
+        </div>
+        <!--img id="img2" src="https://i.imgur.com/J0KIAPh.jpeg" referrerpolicy="no-referrer" alt="" class="mt-4" style="width: 0;">
+        <br>
+        <button id="explore" style="font-family: metropolislight;" class="bg-orange-600 text-white p-2 text-2xl hover:bg-transparent hover:text-black/50 mt-6 mb-2 ">Explore now!</button>
+        <img id="wkwk" src="https://i.imgur.com/J0KIAPh.jpeg" referrerpolicy="no-referrer" alt="" class="rounded-xl dipslay-block float-left lg:display-none" style="display: inline;margin-left: 50%;width: 50%;transform: translate(0px, -10em);"-->
+    </main>
+    <div class="px-16" id="realbody">
+        
+    </div>
+    <script>
+        function news(){
+            open('/news', '_self')
+        }
+        function gallery(){
+            open('/gallery', '_self')
+        }
+        function newreport(){
+            open('/report/new')
+        }
+        PowerGlitch.glitch('.glitch')
+    </script>
+    
+
+</body>
+</html>
