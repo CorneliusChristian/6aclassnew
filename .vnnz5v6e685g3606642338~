@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6A Class</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&f[]=switzer@600,201&f[]=supreme@400,300,700&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=general-sans@500,600,400&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=array@400,401&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=pilcrow-rounded@600&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+      @font-face {
+            font-family: Heavitas;
+            src: url(/a/font/Heavitas.ttf);
+        }
+      body{
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+    </style>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&f[]=switzer@600,201&f[]=supreme@400,700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- THIS WEBSITE IS UNDER DEVELOPMENT / WEBSITE INI SEDANG DALAM PERKEMBANGAN-->
+    <div class="kkl" style="width: 100%;height:3px;"></div>
+    <header class="p-6">
+      <button onclick="home()" style="font-family: Array;display: inline;" class="text-xl"><span class="rounded-md bg-orange-600 text-white p-1 px-1.5 hover:bg-orange-600/30 hover:text-orange-600 pt-2" style="font-family: 'Heavitas';">6A</span> <span class="text-orange-600" style="font-family: 'Chillax';" id="joke">Class</span> <!--span style="font-family: Supreme;background: #59CE8F;" class="font-semibold text-base text-white p-0.5 px-1 rounded-lg">ALPHA</span--></button>
+      <div class="kkk" style="display: inline;">
+          <a  id="toolbar" class="float-right font-medium text-italic font-italic text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="/adminlog/">Admin</a>
+          <button id="toolbar"  class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" onclick="gallery()">Gallery</button>
+          <a  id="toolbar" class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="/news">News</a>
+          <a  id="toolbar" class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="/student">Student List</a>
+          <button id="toolbar"  class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" onclick="links()">Links</button>
+          <a id="toolbar"  class="float-right font-semibold text-base mx-2 text-red-500/80 hover:text-red-600" style="font-family: General Sans;" href="/report"><i class="bi bi-exclamation-triangle-fill"></i> Report</a>
+      </div>
+  </header>
+    <main class="p-6 flex gap-2" style="width: 100vw;">
+      <div id="main" style="width:60vw;">
+        <h1 class="text-4xl mb-2 text-indigo-500/80" style="font-family: Heavitas;">6A Class' Daily News</h1>
+        <hr>
+        <p class="text-slate-600 py-2 text-xl" id="nothinghere" style="font-family: Supreme;">There's nothing here ¯\_(ツ)_/¯</p>
+      </div>
+      <div style="position: sticky;" class="py-2">
+        <div class="p-4 bg-orange-100/40 ring-1 ring-zinc-200 rounded-lg ml-8" style="width: 30vw;height: min-content; float: right;">
+          <h1 style="font-family: Supreme;font-weight: 550;" class="text-black/80 text-xl">6A Newsboard</h1>
+          <p style="font-family: Supreme;" class="font-light">
+            <span style="font-family: Supreme;">Curated article and news for 6A Class.</span>
+            <hr>
+            <span style="font-family: Supreme;" class="font-light">
+              Rules: <br>
+              1. Don't abuse/vandalizing the news board. <br>
+              2. Don't share any inapproriate content/images/videos to this board. <br>
+              3. Be kind. <br>
+              4. Use the platform with carefulness. <br>
+            </span>
+          </p>
+        </div>
+      </div>
+      
+    </main>
+    <link rel="stylesheet" href="/a/style.css">
+    <script src="/a/script.js"></script>
+    <script>
+      var socket = io();
+	  socket.emit('reqp')
+      socket.on('poster', (msg) => {
+        console.log(msg)
+        for(var i = 0;i < (msg).length;i++){
+          document.querySelector('#main').innerHTML += '<a href="/post/'+msg[i]['id']+'"><div class="p-4 bg-zinc-100/40 ring-1 ring-zinc-200 rounded-lg hover:ring-2 cursor-pointer my-4" style="word-wrap:break-word"><p class="text-stone-500/70 font-light text-base" style="font-weight: 300;font-family: \'Heavitas\';">Posted by u/admin</p><h1 style="font-family: Heavitas;font-weight: 550;" class="text-black/80 text-xl">--j</h1><a href="--i"><img src="--i" alt="" style="width: 100%;object-fit: cover;max-height:30rem" class="py-1 rounded-lg shadow-xl"></a><p style="font-family: Supreme;">--c</p></div></a>'.replace('--c', msg[i]['content']).replace('--j',  msg[i]['title']).replace('--i', msg[i]['image']).replace('--i', msg[i]['image']).replace(/\r?\n/g, '<br />');
+          document.querySelector('#nothinghere').innerHTML = ''
+        }
+      })
+    </script>
+</body>
+</html>

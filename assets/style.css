@@ -18,15 +18,8 @@
     font-family: myFirstFont;
 }
 .kkl{
-    background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, #e81cff);
-}
-img{
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-    transition: .2s;
-    cursor: pointer;
-}
-img:hover{
-    box-shadow: none;
+    background: rgb(255,83,0);
+    background: linear-gradient(90deg, rgba(255,83,0,1) 0%, rgba(255,229,0,1) 100%); 
 }
 
 #buttonClass {

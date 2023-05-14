@@ -1,0 +1,9 @@
+<div class="" style="word-wrap:break-word;min-width: 500px;min-height: 100%;background: rgba(0, 0, 0, .65) url('https://picsum.photos/imgnum');background-blend-mode: darken;background-size: cover;background-position: center;">
+    <p class="text-stone-200/70 font-light text-base" style="font-weight: 300;font-family: Supreme;">Posted by u/admin</p>
+    <h1 style="font-family: Supreme;font-weight: 550;" class="text-stone-400/80 text-xl">--j</h1>
+    <p style="font-family: Supreme;" class="text-stone-400/80">--c</p>
+</div>
+<!--
+    parseInt(Math.random() * 100 + 950
+-->
+'<a href="--i"><div onclick="open('/r/post')" class="pb-8 pr-40 pl-4 cursor-pointer ring-0 hover:ring-4 hover:ring-zinc-300 pt-4 text-slate-900 rounded-lg hover:bg-zinc-200" style="word-wrap:break-word;min-width: 500px;min-height: 100%;background: rgba(0, 0, 0, .65) url(\'--i\');background-blend-mode: darken;background-size: cover;background-position: center;"><p class="text-stone-200/70 font-light text-base" style="font-weight: 300;">Posted by u/admin</p><h1 style="font-family: Supreme;font-weight: 550;" class="text-stone-400/80 text-xl">--j</h1><p style="font-family: Supreme;" class="text-stone-400/80">--c</p></div></a>'.replace('--c', msg[i]['content']).replace('--j',  msg[i]['title']).replace('--i', msg[i]['image']).replace('--i', 'https://picsum.photos/'+(parseInt(Math.random() * 100 + 950).toString())).replace(/\r?\n/g, '<br />');

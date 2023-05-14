@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6A Class</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&display=swap" rel="stylesheet"> 
     <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=general-sans@500,600,400&display=swap" rel="stylesheet"> 
     <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&f[]=chubbo@700&f[]=array@400,401&display=swap" rel="stylesheet"> 
@@ -14,58 +13,65 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
     <script src="/socket.io/socket.io.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/output.css">
+	<script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @font-face {
+            font-family: Heavitas;
+            src: url(/a/font/Heavitas.ttf);
+        }
         p{
             font-family: Supreme;
         }
+        body, html{
+            background: #edeff0;
+        }
     </style>
+    <script src="/a/jquery.min.js"></script>
+    <script src="/a/scripts/main.js"></script>
 </head>
 <body>
-	<img src="https://iplogger.com/1VtJJ4.png" />
     <!-- THIS WEBSITE IS UNDER DEVELOPMENT / WEBSITE INI SEDANG DALAM PERKEMBANGAN-->
     <div class="kkl" style="width: 100%;height:3px;"></div>
     <header class="p-6">
-        <button onclick="home()" style="font-family: Array;display: inline;" class="text-xl"><span class="rounded-md bg-orange-600 text-white p-1 px-1.5 hover:bg-orange-600/30 hover:text-orange-600" style="font-family: 'Chillax';">6A</span> <span class="text-orange-600" style="font-family: 'Chillax';" id="joke">Class</span> <!--span style="font-family: Supreme;background: #59CE8F;" class="font-semibold text-base text-white p-0.5 px-1 rounded-lg">ALPHA</span--></button>
+        <button onclick="home()" style="font-family: Array;display: inline;" class="text-xl"><span class="rounded-md bg-orange-600 text-white p-1 px-1.5 hover:bg-orange-600/30 hover:text-orange-600 pt-2" style="font-family: 'Heavitas';">6A</span> <span class="text-orange-600" style="font-family: 'Chillax';" id="joke">Class</span> <!--span style="font-family: Supreme;background: #59CE8F;" class="font-semibold text-base text-white p-0.5 px-1 rounded-lg">ALPHA</span--></button>
         <div class="kkk" style="display: inline;">
             <a  id="toolbar" class="float-right font-medium text-italic font-italic text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="/adminlog/">Admin</a>
             <button id="toolbar"  class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" onclick="gallery()">Gallery</button>
-            <a  id="toolbar" class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="news/">News</a>
+            <a  id="toolbar" class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="/news">News</a>
             <a  id="toolbar" class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" href="/student">Student List</a>
             <button id="toolbar"  class="float-right font-semibold text-base mx-2 text-black/50 hover:text-black" style="font-family: General Sans;" onclick="links()">Links</button>
-            <button id="toolbar" onclick="hkj()" class="float-right font-semibold text-base mx-2 text-red-500/80 hover:text-red-600" style="font-family: General Sans;" onclick="dev()"><i class="bi bi-exclamation-triangle-fill"></i> Report Center</button>
+            <a id="toolbar"  class="float-right font-semibold text-base mx-2 text-red-500/80 hover:text-red-600" style="font-family: General Sans;" href="/report"><i class="bi bi-exclamation-triangle-fill"></i> Report</a>
         </div>
-        
     </header>
-    <main class="grid grid-cols-2 p-16 px-20" id="grid1" style="width: 100%;">
+    <main class="p-16 px-20" id="grid1" style="width: 100%;">
         <div class="text-2xl text-black/50 mt-6 md:mt-12" style="display: inline;font-family: 'Supreme';width: 100%;">
-            Welcome to<br>
-            <span class="text-6xl text-black/70 font-semibold" style="font-family: Supreme;">Class 6A</span>
             <br>
-            <br>
-            <a href="#ccc" id="buttonClass" class="text-2xl">Explore now!</a>
+            <span class="text-7xl text-black/70 font-semibold rounded-xl p-4 bg-white" style="font-family: Heavitas;display: inline;">6A CLASS</span>
+            <a href="#ccc" id="" class="text-base" style="z-index: 200;float: right;display: inline;text-align: center;font-family: 'Heavitas';min-height: 50px;background: white;vertical-align: middle;border-radius: 1rem;padding: 1rem;">Explore now!</a>
         </div>
-        <!--img id="img2" src="https://i.imgur.com/J0KIAPh.jpeg" referrerpolicy="no-referrer" alt="" class="mt-4" style="width: 0;">
-        <br>
-        <button id="explore" style="font-family: metropolislight;" class="bg-orange-600 text-white p-2 text-2xl hover:bg-transparent hover:text-black/50 mt-6 mb-2 ">Explore now!</button>
-        <img id="wkwk" src="https://i.imgur.com/J0KIAPh.jpeg" referrerpolicy="no-referrer" alt="" class="rounded-xl dipslay-block float-left lg:display-none" style="display: inline;margin-left: 50%;width: 50%;transform: translate(0px, -10em);"-->
+        <img id="img2" src="https://i.ibb.co/b2LNVg5/J0KIAPh.jpg" referrerpolicy="no-referrer" alt="" class="mt-4" style="width: 0;">
+        <!--br>
+        <button id="explore" style="font-family: metropolislight;" class="bg-orange-600 text-white p-2 text-2xl hover:bg-transparent hover:text-black/50 mt-6 mb-2 ">Explore now!</button-->
+        <!--img id="wkwk" src="https://i.ibb.co/b2LNVg5/J0KIAPh.jpg" referrerpolicy="no-referrer" alt="" class="rounded-xl dipslay-block float-left lg:display-none" style="display: inline;margin-left: 50%;width: 50%;transform: translate(0px, -10em);"-->
         <div>
-            <img id="img2" src="https://upload.cornel629.repl.co/u/1a0aa7a1-2e6b-4049-b119-3ba51901a95b.png" referrerpolicy="no-referrer" alt="" class="mt-8 rounded-xl">
-        </div>
+            <img id="" src="https://i.ibb.co/b2LNVg5/J0KIAPh.jpg" referrerpolicy="no-referrer" alt="" class="rounded-xl" style="width: 100%;transform: translate(0, -1rem);">
+	</div>
     </main>
     <div class="px-16" id="realbody">
         <hr class="mx-20" style="border: 1px dotted rgba(0, 0, 0, 0.162);">
         <br>
-        <h1 class="text-4xl font-semibold" id="ccc" style="font-family: 'Supreme';">
-            Introduction
+        <h1 class="text-5xl mt-6 font-semibold text-black/60" id="ccc" style="font-family: 'Heavitas';">
+            welcome!
         </h1>
-        <p class="text-xl float-left text-slate-900/80 pb-1" id="welcome" style="font-family: 'Supreme', sans-serif;transform: translate(0px, 0.5em)    ;" >
+        <p class="text-2xl float-left text-slate-900/80 pb-1" id="welcome" style="font-family: 'Supreme', sans-serif;transform: translate(0px, 0.5em)    ;" >
             Welcome to our class! there's so many fun things to do in our class! Make sure visit some of our pages, gallery, and more!
         </p>
     </div>
     <br>
     <br>
     <div class="px-16 mt-4 mb-12" id="realbody">
-        <h1 class="text-3xl font-semibold" style="font-family: 'Supreme';">
+        <h1 class="text-3xl pl-1 font-semibold text-black/80" style="font-family: 'Heavitas';">
             News
         </h1>
         <div class="flex gap-2 mt-2 pl-1 py-2" style="overflow-x: scroll;min-height: 200px;" id="main">
@@ -77,6 +83,7 @@
             <button class="p-16 px-40 bg-blue-500 text-white rounded-lg hover:bg-blue-600">4</button-->
         </div>
         <div class=""></div>
+		
     </div>
     <link rel="stylesheet" href="/a/style.css">
     <script>
@@ -86,9 +93,6 @@
         function gallery(){
             open('/gallery', '_self')
         }
-		function hkj(){
-			open('/report')
-		}
     </script>
     <script>
         var socket = io();
